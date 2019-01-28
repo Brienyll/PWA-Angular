@@ -1,3 +1,6 @@
-<p>
-  todos-list works!
-</p>
+<ul>
+  <li *ngFor='let todo of todos'>
+    {{todo.title}} <i> {{ todo.completed ? 'Completed' 
+      : 'Not Completed' }} </i>
+  </li>
+</ul>
