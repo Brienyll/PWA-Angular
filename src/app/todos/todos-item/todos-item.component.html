@@ -1,3 +1,4 @@
-<p>
-  todos-item works!
+<p (click)="sendTodo($event)">
+  {{todo.title}} <i> {{ todo.completed ? 'Completed' 
+    : 'Not Completed' }} </i>
 </p>

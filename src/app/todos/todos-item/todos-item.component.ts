@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Todo } from '../todo';
 
 @Component({
   selector: 'app-todos-item',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos-item.component.scss']
 })
 export class TodosItemComponent implements OnInit {
+  @Input() 
+  todo: Todo;
+
+  @Output() 
+  selectedTodo: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  sendTodo(e) {
+    this.selectedTodo.emit(this.todo)
   }
 
 }

@@ -18,4 +18,8 @@ export class TodosListComponent implements OnInit {
     });
   }
 
+  onSelectedTodo(event) {
+    console.log(event);
+  }
+
 }
